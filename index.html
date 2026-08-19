@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Round Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="app">
+    <header>
+      <h1>ROUND TIMER</h1><button id="settingsButton">⚙</button>
+    </header>
+    <link rel="icon" href="assets/favicon.ico">
+    <section id="timerPage" class="page active">
+      <div class="controls">
+        <div class="control-row">
+          <div>TIMER</div>
+          <div class="toggle"><button data-control="power" data-value="off">OFF</button><button data-control="power"
+              data-value="on">ON</button></div>
+        </div>
+        <div class="control-row">
+          <div>ROUND</div>
+          <div class="toggle"><button data-control="round" data-value="120">2 MIN</button><button data-control="round"
+              data-value="180">3 MIN</button></div>
+        </div>
+        <div class="control-row">
+          <div>REST</div>
+          <div class="toggle"><button data-control="rest" data-value="30">30 SEC</button><button data-control="rest"
+              data-value="60">1 MIN</button></div>
+        </div>
+      </div>
+      <section id="timerDisplay" class="timer-display rest">
+        <div id="phase">READY</div>
+        <div id="countdown">01:00</div>
+        <div id="status">TIMER OFF</div>
+      </section><button id="reset" class="reset">RESET</button>
+    </section>
+    <section id="settingsPage" class="page">
+      <div class="settings-header"><button id="backButton">← TIMER</button>
+        <h2>SOUND SETTINGS</h2><button id="resetSoundButton">DEFAULTS</button>
+      </div>
+      <div class="settings-card">
+        <h3>10 SECOND WARNING</h3>
+        <div class="setting"><span>Frequency <b id="warningFrequencyValue"></b></span><input id="warningFrequency"
+            type="range" min="500" max="3000" step="10"></div>
+        <div class="setting"><span>Volume <b id="warningVolumeValue"></b></span><input id="warningVolume" type="range"
+            min=".1" max="1" step=".01"></div>
+        <div class="setting"><span>Duration <b id="warningDurationValue"></b></span><input id="warningDuration"
+            type="range" min=".08" max=".8" step=".01"></div>
+        <div class="setting"><span>2nd Harmonic <b id="warningHarmonic2Value"></b></span><input id="warningHarmonic2"
+            type="range" min="0" max=".8" step=".01"></div>
+        <div class="setting"><span>3rd Harmonic <b id="warningHarmonic3Value"></b></span><input id="warningHarmonic3"
+            type="range" min="0" max=".6" step=".01"></div>
+        <div class="setting"><span>Ding Spacing <b id="warningSpacingValue"></b></span><input id="warningSpacing"
+            type="range" min="100" max="600" step="10"></div>
+        <button id="testWarning" class="test">🔔 TEST WARNING</button>
+      </div>
+      <div class="settings-card">
+        <h3>END OF ROUND / REST</h3>
+        <div class="setting"><span>Frequency <b id="endFrequencyValue"></b></span><input id="endFrequency" type="range"
+            min="300" max="2000" step="10"></div>
+        <div class="setting"><span>Volume <b id="endVolumeValue"></b></span><input id="endVolume" type="range" min=".1"
+            max="1" step=".01"></div>
+        <div class="setting"><span>Duration <b id="endDurationValue"></b></span><input id="endDuration" type="range"
+            min=".1" max=".8" step=".01"></div>
+        <div class="setting"><span>2nd Harmonic <b id="endHarmonic2Value"></b></span><input id="endHarmonic2"
+            type="range" min="0" max=".8" step=".01"></div>
+        <div class="setting"><span>3rd Harmonic <b id="endHarmonic3Value"></b></span><input id="endHarmonic3"
+            type="range" min="0" max=".6" step=".01"></div>
+        <div class="setting"><span>Ding Spacing <b id="endSpacingValue"></b></span><input id="endSpacing" type="range"
+            min="80" max="500" step="10"></div>
+        <button id="testEnd" class="test">🔔 TEST END</button><button id="testSingle" class="test secondary">🔔 TEST
+          SINGLE DING</button>
+      </div>
+      <p class="note">Sound settings save automatically in this browser.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>

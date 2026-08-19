@@ -1,0 +1,11 @@
+# Ignore files from being included in the Docker build context
+.env
+README.md
+node_modules/
+.wrangler/
+.git/
+src/
+tests/
+package-lock.json
+
+# Future iteration of this website would be to add ./assets here and deliver from CDN. For now, we will keep the assets in the build context for simplicity.

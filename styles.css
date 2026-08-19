@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #101010;
+    color: #fff;
+    font-family: system-ui, -apple-system, sans-serif
+}
+
+.app {
+    width: min(560px, 92vw);
+    margin: auto;
+    padding: 24px 0 40px
+}
+
+header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 24px
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: .12em
+}
+
+header button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #1d1d1d;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.page {
+    display: none
+}
+
+.page.active {
+    display: block
+}
+
+.controls,
+.settings-card {
+    background: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 18px;
+    padding: 8px 18px
+}
+
+.control-row {
+    padding: 18px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    font-weight: 800;
+    letter-spacing: .12em;
+    font-size: .8rem
+}
+
+.control-row:last-child {
+    border: 0
+}
+
+.toggle {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    margin-top: 10px;
+    background: #0d0d0d;
+    border-radius: 12px
+}
+
+.toggle button {
+    flex: 1;
+    height: 46px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #777;
+    font-weight: 800;
+    cursor: pointer
+}
+
+.toggle button.selected {
+    background: #f2f2f2;
+    color: #111
+}
+
+.toggle button.power-on.selected {
+    background: #38b86b;
+    color: #07170d
+}
+
+.timer-display {
+    margin: 24px 0 18px;
+    padding: 28px 10px;
+    border-radius: 18px;
+    text-align: center;
+    background: #1c252d;
+    border: 1px solid #303030
+}
+
+.timer-display.round {
+    background: #1e2b22
+}
+
+.timer-display.warning {
+    background: #40331d
+}
+
+.timer-display #phase {
+    font-weight: 900;
+    letter-spacing: .18em;
+    color: #aaa
+}
+
+.timer-display #countdown {
+    font-size: clamp(5.5rem, 23vw, 9rem);
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    margin: 8px 0
+}
+
+.timer-display #status {
+    color: #888
+}
+
+.reset,
+.test {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 12px;
+    background: #303030;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer
+}
+
+.settings-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 16px
+}
+
+.settings-header h2 {
+    font-size: 1rem;
+    text-align: center
+}
+
+.settings-header button {
+    background: #1d1d1d;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 9px;
+    padding: 9px;
+    font-weight: 800
+}
+
+.settings-card {
+    padding: 20px;
+    margin-bottom: 16px
+}
+
+.settings-card h3 {
+    color: #aaa;
+    font-size: .85rem;
+    letter-spacing: .12em;
+    margin: 0 0 20px
+}
+
+.setting {
+    margin: 18px 0
+}
+
+.setting span {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem
+}
+
+.setting b {
+    font-variant-numeric: tabular-nums
+}
+
+.setting input {
+    width: 100%;
+    margin-top: 9px;
+    accent-color: #fff
+}
+
+.test {
+    background: #38b86b;
+    color: #07170d;
+    margin-top: 8px
+}
+
+.test.secondary {
+    background: #303030;
+    color: #fff;
+    margin-top: 10px
+}
+
+.note {
+    text-align: center;
+    color: #666;
+    font-size: .8rem
+}

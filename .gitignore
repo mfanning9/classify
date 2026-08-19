@@ -1,0 +1,20 @@
+# Exclude providers from source
+**/.terraform/*
+# Exclude statefile from source
+**/terraform/terraform.tfstate
+
+# Mac stuff
+**/.DS_Store
+
+# Pulumi
+.pulumi/
+*.bak
+Pulumi.*.yaml.backup
+Pulumi.*.json
+
+# node files
+node_modules/
+
+# Wrangler
+.wrangler/
+.dev.vars
